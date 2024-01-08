@@ -26,7 +26,7 @@ NEPI Engine setup and source code is distributed across a few top-level reposito
 
 - [nepi_rui](https://github.com/numurus-nepi/nepi_rui) - Node.js project for the browser-based, NEPI-device-hosted Resident User Interface for setup, configuration, and observation of NEPI-enabled devices.
 
-- [nepi-bot](https://github.com/numurus-nepi/nepi_rui) - Python application for NEPI-device cloud/server connectivity, configuration, and control. The primitive interface to this application is fully file-based, but see nepi_edge_sdk_link for an alternative programmatic interface
+- [nepi-bot](https://github.com/numurus-nepi/nepi-bot) - Python application for NEPI-device cloud/server connectivity, configuration, and control. The primitive interface to this application is fully file-based, but see nepi_edge_sdk_link for an alternative programmatic interface
 
 - [nepi_edge_sdk_link](https://github.com/numurus-nepi/nepi_edge_sdk_link) - C and Python library that allows on-device applications to configure and control nepi-bot. The NEPI Engine ROS interface to nepi-bot (nepi_link_ros_bridge) leverages this library, and custom applications can, too.
 
@@ -58,7 +58,7 @@ Workflow:
 
 - [nepi_rui](https://github.com/numurus-nepi/nepi_rui)
 
-- [nepi-bot](https://github.com/numurus-nepi/nepi_rui)
+- [nepi-bot](https://github.com/numurus-nepi/nepi-bot)
 
 - [nepi_edge_sdk_link](https://github.com/numurus-nepi/nepi_edge_sdk_link)
 
