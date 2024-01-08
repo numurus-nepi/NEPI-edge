@@ -14,7 +14,7 @@ The following sections describe the architecture of the NEPI Engine and provide 
 
 The following diagram provides a high-level overview of the functional components of NEPI Engine:
 
-<img src="https://github.com/numurus-nepi/nepi-engine/assets/140538444/30ba3894-7a87-4b2c-8d88-2a32d9372dad" width="600px">
+<img src="https://numurus.com/wp-content/uploads/NEPI_Engine_Architecture_2000x1700.png" width="600px">
 
 A NEPI-enabled device provides the complete NEPI Engine suite of tools and applications. Most of these components can be enabled and disabled through system configuration, and many can also be started and stopped at run-time as needed.
 
