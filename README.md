@@ -20,19 +20,19 @@ A NEPI-enabled device provides the complete NEPI Engine suite of tools and appli
 
 NEPI Engine setup and source code is distributed across a few top-level repositories:
 
-- [nepi_rootfs_tools](https://github.com/numurus-nepi/nepi_rootfs_tools) - Collection of scripts and documentation for preparing a base system. This includes setting up for the NEPI fully redundant system image software update scheme and installing all dependencies (including platform-specific dependencies where applicable). Most of the operative code is distributed to Git submodules within this top-level repo.
+- [nepi_rootfs_tools](https://github.com/numurus-nepi/nepi_rootfs_tools) - Collection of scripts and documentation for preparing a base system. This includes setting up for the NEPI fully redundant system image software update scheme and installing all dependencies (including platform-specific dependencies where applicable). 
 
-- [nepi_base_ws](https://github.com/numurus-nepi/nepi_base_ws) - Superproject for primary NEPI Engine SDK, including sensor and motion control drivers, system configuration tools, ROS nodes and interfaces, and test-and-development utilities. This is the nuts-and-bolts of the NEPI Engine.
+- [nepi_base_ws](https://github.com/numurus-nepi/nepi_base_ws) - Superproject for primary NEPI Engine SDK, including sensor and motion control drivers, system configuration tools, ROS nodes and interfaces, and test-and-development utilities. This is the nuts-and-bolts of the NEPI Engine. Most of the operative code is distributed to Git submodules within this top-level repo.
 
 - [nepi_rui](https://github.com/numurus-nepi/nepi_rui) - Node.js project for the browser-based, NEPI-device-hosted Resident User Interface for setup, configuration, and observation of NEPI-enabled devices.
 
 - [nepi-bot](https://github.com/numurus-nepi/nepi_rui) - Python application for NEPI-device cloud/server connectivity, configuration, and control. The primitive interface to this application is fully file-based, but see nepi_edge_sdk_link for an alternative programmatic interface
 
-- [nepi_edge_sdk_link](https://github.com/numurus-nepi/nepi_edge_sdk_link) - C and Python library that allows on-device applications to configure and control nepi-bot. The NEPI Engine ROS API to nepi-bot leverages this library.
+- [nepi_edge_sdk_link](https://github.com/numurus-nepi/nepi_edge_sdk_link) - C and Python library that allows on-device applications to configure and control nepi-bot. The NEPI Engine ROS interface to nepi-bot (nepi_link_ros_bridge) leverages this library, and custom applications can, too.
 
 ## Typical System Bring-up
 The following workflow describes how NEPI Engine is first deployed to a new hardware platform. It assumes
-- Your target device has a Debian-based Board Support Package (BSP) and/or Operating System (O/S) available and accessible as a binary image, compressed archive (.tar.gz), etc.
+- Your target device has a Debian-based Board Support Package (BSP) and/or Operating System (O/S) available and accessible as a binary image (_img.raw_, _.bin_), compressed archive (_.tar.gz_), etc.
 - Your target device has a storage media installed that allows you to add NEPI-specific partitions (typically requires 32GB for each of the NEPI A/B partitions, and ideally a large leftover space to be dedicated to the _nepi_storage_ partition)
 - Your target device can be configured for internet access. 
 
@@ -51,9 +51,9 @@ Workflow:
     ```
     ensuring that the NEPI_ROOTFS_A device is listed as "Mounted on" /
 
-1. Now begin converting the BSP rootfs into a full-fledged NEPI rootfs by following the instructions for [constructing the main a/b rootfs from a base image](https://github.com/numurus-nepi/nepi_rootfs_tools?tab=readme-ov-file#constructing-the-main-ab-rootfs-from-a-base-image) from the nepi_rootfs_tools README. You should stop at step 9.
+1. Now begin converting the BSP rootfs into a full-fledged NEPI rootfs by following the instructions for [constructing the main a/b rootfs from a base image](https://github.com/numurus-nepi/nepi_rootfs_tools?tab=readme-ov-file#constructing-the-main-ab-rootfs-from-a-base-image) from the nepi_rootfs_tools README. You should stop after running the setup_nepi_<xyz>_rootfs.sh script and proceed from here to build NEPI s/w from source.
 
-1. At this point you have a rootfs that has all dependencies and build-tools installed to begin building the NEPI Engine software. Those build steps are individually covered in the repositories that constitute the full NEPI Engine as enumerated above in NEPI Engine Architecture(#nepi-engine-architecture). Go through the build/install steps in each of these repo READMEs individually:
+1. At this point you have a rootfs that has all dependencies and build-tools installed to begin building the NEPI Engine software. Those build steps are individually covered in the repositories that constitute the full NEPI Engine as enumerated above in NEPI Engine Architecture(#nepi-engine-architecture) section. Go through the build/install steps in each of these repo READMEs individually:
 - [nepi_base_ws](https://github.com/numurus-nepi/nepi_base_ws)
 
 - [nepi_rui](https://github.com/numurus-nepi/nepi_rui)
