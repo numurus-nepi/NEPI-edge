@@ -12,10 +12,6 @@ The following sections describe the architecture of the NEPI Engine and provide 
 
 ## NEPI Engine Architecture
 
-The following diagram provides a high-level overview of the functional components of NEPI Engine:
-
-<img src="https://numurus.com/wp-content/uploads/NEPI_Engine_Architecture_2000x1700.png" width="600px">
-
 A NEPI-enabled device provides the complete NEPI Engine suite of tools and applications. Most of these components can be enabled and disabled through system configuration, and many can also be started and stopped at run-time as needed.
 
 NEPI Engine setup and source code is distributed across a few top-level repositories:
