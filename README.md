@@ -6,7 +6,7 @@ This repository contains documentation and tools for getting started with NEPI E
 ## Hardware and O/S Requirements
 NEPI Engine runs on lots of embedded Linux devices, though certain hardware and O/S configurations are more well-suited than others. In general, NVIDIA Jetson platforms are well tested and supported. The scripts and documentation in this repository are tailored for modern Debian-based Linux distributions (e.g., Ubuntu 18.04+); if that is not your situation, then NEPI _may_ still be appropriate wholly or in part, albeit with additional setup legwork.
 
-**Numurus provides commercially licensed pre-built root filesystem images and complete hardware solutions for select platforms -- speed up your development time considerably by [exploring one of these options](https://numurus.com/wp-content/uploads/NEPI-Engine-Pre-Built-Image-Installation-Instructions.pdf). Or [contact us](mailto:nepi@numurus.com) to discuss professional support options for other platforms**
+**Numurus provides commercially licensed pre-built root filesystem images and complete hardware solutions for select platforms -- speed up your development time considerably by [exploring one of these options](https://nepi.com/software-nepi-engine/). Or [contact us](mailto:nepi@numurus.com) to discuss professional support options for other platforms**
 
 The following sections describe the architecture of the NEPI Engine and provide tools and guidance for getting NEPI running on your device.
 
